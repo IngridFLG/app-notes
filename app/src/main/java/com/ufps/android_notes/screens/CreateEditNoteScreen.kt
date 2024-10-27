@@ -38,7 +38,7 @@ fun CreateEditNoteScreen(navController: NavHostController, notesList: MutableLis
                 value = content,
                 onValueChange = { content = it },
                 label = { Text("Contenido") },
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth().height(150.dp)
             )
             Spacer(modifier = Modifier.height(16.dp))
             Button(

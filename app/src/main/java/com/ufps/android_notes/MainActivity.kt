@@ -49,7 +49,7 @@ fun SetupNavGraph(navController: NavHostController, notesList: MutableList<Note>
         composable("noteDetails/{noteIndex}") { backStackEntry ->
             val index = backStackEntry.arguments?.getString("noteIndex")?.toIntOrNull()
             if (index != null && index < notesList.size) {
-                NoteDetailsScreen(note = notesList[index], navController = navController)
+                NoteDetailsScreen(note = notesList[index], notesList = notesList, navController = navController)
             }
         }
     }
